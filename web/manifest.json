@@ -1,6 +1,6 @@
 {
-    "name": "sdf",
-    "short_name": "sdf",
+    "name": "koffi_unoesc",
+    "short_name": "koffi_unoesc",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

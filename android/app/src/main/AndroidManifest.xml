@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="sdf"
+        android:label="koffi_unoesc
+koffi_unoesc"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
