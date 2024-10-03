@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:koffi_unoesc/src/ui/components/widgets/custom_button.dart';
+import 'package:koffi_unoesc/src/ui/components/custom_button.dart';
 
 class InitialScreen extends StatelessWidget {
   const InitialScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Padding(
+    return Scaffold(
+      body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 128),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
