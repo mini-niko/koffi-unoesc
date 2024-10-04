@@ -7,6 +7,7 @@ const colorBackground = Color.fromRGBO(230, 230, 230, 1);
 Theme koffiTheme = Theme(
   data: ThemeData(
     textTheme: GoogleFonts.lexendTextTheme(),
+    fontFamily: GoogleFonts.lexend().fontFamily,
     primaryColor: colorPrimary,
     scaffoldBackgroundColor: colorBackground,
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -20,8 +21,20 @@ Theme koffiTheme = Theme(
           Color.fromRGBO(199, 121, 101, 1)
         ),
         padding: const WidgetStatePropertyAll(
-          EdgeInsets.only(top: 22, bottom: 22),
+          EdgeInsets.symmetric(vertical: 22.5),
         )
+      )
+    ),
+    primaryTextTheme: const TextTheme(
+      titleLarge: TextStyle(
+        fontSize: 48,
+        fontWeight: FontWeight.w900,
+        color: Colors.black
+      ),
+      titleMedium: TextStyle(
+        fontSize: 24,
+        color:  Color.fromRGBO(230, 230, 230, 1),
+        fontWeight: FontWeight.w700
       )
     )
   ),

@@ -6,9 +6,11 @@ class InitialScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 128),
+        padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 48),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -19,21 +21,18 @@ class InitialScreen extends StatelessWidget {
                   width: 170,
                 ),
                 const SizedBox(height: 16,),
-                const Text(
+                Text(
                   "Koffi",
-                  style: TextStyle(
-                    fontSize: 48,
-                    fontWeight: FontWeight.w900
-                  ),
+                  style: theme.primaryTextTheme.titleLarge,
                 ),
               ],
             ),
             const Column(
               children: [
-                SizedBox(height: 128,),
-                CustomButton(title: "Entrar", fontSize: 24),
+                SizedBox(height: 128),
+                CustomButton(title: "Entrar"),
                 SizedBox(height: 32),
-                CustomButton(title: "Registrar", fontSize: 24),
+                CustomButton(title: "Registrar"),
               ],
             )
           ],
