@@ -17,27 +17,40 @@ class InitialScreen extends StatelessWidget {
             Column(
               children: [
                 Image.asset(
-                  "assets/images/logo.png", 
+                  "assets/images/logo.png",
                   width: 170,
                 ),
-                const SizedBox(height: 16,),
+                const SizedBox(
+                  height: 16,
+                ),
                 Text(
                   "Koffi",
                   style: theme.primaryTextTheme.titleLarge,
                 ),
               ],
             ),
-            const Column(
+            Column(
               children: [
-                SizedBox(height: 128),
-                CustomButton(title: "Entrar"),
-                SizedBox(height: 32),
-                CustomButton(title: "Registrar"),
+                const SizedBox(height: 128),
+                CustomButton(
+                  title: "Entrar",
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, "/login");
+                  },
+                ),
+                const SizedBox(height: 32),
+                CustomButton(
+                  title: "Registrar",
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, "/register");
+                  },
+                ),
               ],
             )
           ],
         ),
       ),
+      resizeToAvoidBottomInset: false,
     );
   }
 }

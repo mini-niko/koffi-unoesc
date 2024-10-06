@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:koffi_unoesc/src/ui/components/custom_button.dart';
 import 'package:koffi_unoesc/src/ui/theme/colors.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
@@ -37,10 +37,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        "Entrar",
+                        "Registrar",
                         style: theme.primaryTextTheme.titleMedium,
                       ),
                       const SizedBox(height: 24),
+                      const TextField(
+                        decoration: InputDecoration(
+                          hintText: "Nome",
+                        ),
+                      ),
+                      const SizedBox(height: 16),
                       const TextField(
                         decoration: InputDecoration(
                           hintText: "Email",
@@ -64,16 +70,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       RichText(
                         text: TextSpan(
                           style: theme.primaryTextTheme.bodyMedium,
-                          text: "Deseja criar uma? ",
+                          text: "Já tem uma conta? ",
                           children: [
                             TextSpan(
                               style: theme.primaryTextTheme.bodyLarge?.copyWith(
                                 decoration: TextDecoration.underline,
                               ),
-                              text: "Registre",
+                              text: "Entrar",
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
-                                  Navigator.pushNamed(context, "/register");
+                                  Navigator.pushNamed(context, "/login");
                                 },
                             ),
                           ],
