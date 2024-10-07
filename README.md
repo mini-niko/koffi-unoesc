@@ -17,3 +17,7 @@ Para rodar o projeto Flutter você precisa ter instalado na sua máquina:
 ## Como rodar?
 
 Após instalar os requisitos e aceitar os termos do Android, basta abrir a pasta do projeto e rodar o comando `flutter run`, que ele irá rodar o seu projeto no dispositivo desejado. (No presente momento, a implementação de login e registro não foi feita, portanto é possível utilizar o aplicativo sem uma conta).
+
+## Informações adicionais
+
+Caso queira saber, o repositório do nosso teste de API é [mock-coffee](https://github.com/mini-niko/koffi-unoesc). Uma API simples apenas para a POC.
